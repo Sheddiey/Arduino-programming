@@ -17,7 +17,7 @@ byte pin_rows[ROW_NUM] = {9, 8, 7, 6}; //connect to the row pinouts of the keypa
 byte pin_column[COLUMN_NUM] = {5, 4, 3}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), pin_rows, pin_column, ROW_NUM, COLUMN_NUM);
-
+//pin initialization
 void setup() {
   Serial.begin(9600);
   Serial.println("Press 1 for Meyer Lemon");
@@ -29,7 +29,7 @@ void setup() {
   pinMode(11, OUTPUT);
 }
 
-
+//start of a loop
 void loop() {
   char key = keypad.getKey();
 
